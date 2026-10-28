@@ -15,3 +15,4 @@ const pool = new Pool({
 })
 
 app.use(express.json())
+app.use(express.urlencoded({extended: true }))
