@@ -10,5 +10,6 @@ const pool = new Pool({
     user: 'postgres',
     host: 'localhost',
     database: 'mahasiswa',
+    password: 'towinnadzul09122005',
 
 })
