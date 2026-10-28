@@ -16,3 +16,16 @@ const pool = new Pool({
 
 app.use(express.json())
 app.use(express.urlencoded({extended: true }))
+
+// MIDDLEWARE LOGGING
+
+app.use((req, res, next) => {
+    const start = Date.now()
+
+    console.log ({
+        method: req.method,
+        url: req.originalUrl,
+        status: res.statusCode,
+        duration: `${Date.now() - start}ms`,
+    })
+})
