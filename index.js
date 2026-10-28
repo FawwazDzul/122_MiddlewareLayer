@@ -29,3 +29,5 @@ app.use((req, res, next) => {
         duration: `${Date.now() - start}ms`,
     })
 })
+
+next()
