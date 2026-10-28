@@ -35,3 +35,15 @@ app.use((req, res, next) => {
 
 next()
 })
+
+// RESPONSE EVENLOPE
+function successResponse(res, message, data, statusCode = 200) {
+    res.status(statusCode).json({
+        status: 'success',
+        message,
+        data,
+        error: null
+    })
+
+    
+}
